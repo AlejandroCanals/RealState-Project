@@ -1,0 +1,18 @@
+.sobre-nosotros{
+    @include tablet{
+    @include grid(2, 2rem);
+    }
+
+    .texto-nosotros{
+        blockquote{
+            font-weight: bold;
+            font-size: 1.9rem;
+            text-align: start;
+            margin: 0;
+            margin-top: 3rem
+        
+
+        }
+    }
+
+}

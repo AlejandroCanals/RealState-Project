@@ -1,0 +1,43 @@
+.testimonio{
+    background-color: $verde;
+    font-size: 2.4rem;
+    padding: 2rem;
+    columns: $blanco;
+    border-radius: 2rem;
+
+    blockquote{
+        padding-left: 5rem;
+        position: relative;
+        color: $blanco;
+
+        &::before{
+            content:"" ;
+            background-image: url(../img/comilla.svg);
+            background-repeat: no-repeat;
+            width: 6rem;
+            height: 8rem;
+            display: block;
+            position: absolute;
+            left: -2rem;
+        }
+        &::after{
+            content:"" ;
+            background-image: url(../img/comilla.svg);
+            background-repeat: no-repeat;
+            width: 6rem;
+            height: 8rem;
+            display: block;
+            position: absolute;
+            right: 1rem;
+            top: 30rem;
+            
+        }
+
+    }
+
+    p{
+        color: $blanco;
+        text-align: right;
+    }
+    
+}
