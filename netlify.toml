@@ -3,3 +3,7 @@
   publish = "/build"
 
 
+[[redirects]]
+  from = "/index.php"
+  to = "/"
+  status = 301
