@@ -1,6 +1,6 @@
 [build]
   command = "npm install && gulp build"
-  publish = "/build"
+  publish = "build"
 
 
 [[redirects]]
