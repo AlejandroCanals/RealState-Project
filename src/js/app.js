@@ -3,8 +3,8 @@
 document.addEventListener('DOMContentLoaded',function(){
 
     eventListeners();
-
     darkMode();
+ 
 });
 
 /*ESTATE ATENTO POR SI CLICKEAN LA HAMBURGUESA  */
@@ -22,36 +22,42 @@ function navegacionResponsive(){
    navegacion.classList.toggle('mostrar');
 }
 
-
-function darkMode(){
-
-    /*LEE LA CLASE CLASE DARK MODE */
+function darkMode() {
     const botonDarkMode = document.querySelector('.dark-mode-boton');
 
-    /* ESCUCHA POR UN CLICK Y APLICA LA FUNCION DE AGREGAR AL BODY LA CLASE dark-mode y o quitarla segun clickes*/
+    // Función para cambiar el modo entre claro y oscuro
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        // Guardar el estado del modo oscuro en el almacenamiento local
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
+    }
 
-    botonDarkMode.addEventListener('click' ,function(){
-    document.body.classList.toggle ('dark-mode');
-    })
+    botonDarkMode.addEventListener('click', toggleDarkMode);
 
-    /*PREFERENCIA NAVEGADOR PARA EL DARK MODE
-     SI ES TRUE SIEMPRE VA ESTAR EN OSCURO  */
-
-     const prefiereDarkMode = window.matchMedia('(prefers-color-scheme:dark)');
-
-     if(prefiereDarkMode.matches){
-         document.body.classList.add('dark-mode')
-     }else{
-         document.body.classList.remove('dark-mode')
-     }
- 
-    /*Esta funciona hace que si el usuario cambia las preferencia del sistema a otro lo lea y la pagina cambie de modo automaticamente */
-     prefiereDarkMode.addEventListener('change', function(){
-        if(prefiereDarkMode.matches){
-            document.body.classList.add('dark-mode')
-        }else{
-            document.body.classList.remove('dark-mode')
+    // Obtener el estado del modo oscuro del almacenamiento local al cargar la página
+    const storedDarkMode = localStorage.getItem('darkMode');
+    if (storedDarkMode !== null) {
+        const isDarkMode = JSON.parse(storedDarkMode);
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
         }
-     })
+    }
 
+    // Escuchar cambios en las preferencias de color del sistema
+    const prefiereDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+    prefiereDarkMode.addEventListener('change', function () {
+        if (prefiereDarkMode.matches) {
+            document.body.classList.add('dark-mode');
+            // Guardar el estado del modo oscuro en el almacenamiento local
+            localStorage.setItem('darkMode', JSON.stringify(true));
+        } else {
+            document.body.classList.remove('dark-mode');
+            // Guardar el estado del modo oscuro en el almacenamiento local
+            localStorage.setItem('darkMode', JSON.stringify(false));
+        }
+    });
 }
+

@@ -5,8 +5,10 @@
   .contenedor-footer {
     padding-top: $separacion / 2;
     
+    
 
   }
+
 
   .copyright {
     color: $blanco;
@@ -18,4 +20,7 @@
     opacity: 1;
     height: auto;
   }
+}
+.seccion{
+  margin-bottom: 0;
 }
