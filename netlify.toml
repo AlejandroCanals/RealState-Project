@@ -2,8 +2,7 @@
   command = "npm install && gulp build"
   publish = "build"
 
-
 [[redirects]]
-  from = "/index.php"
-  to = "/"
-  status = 301
+from = "/*"
+to = "/index.php"
+status = 200
