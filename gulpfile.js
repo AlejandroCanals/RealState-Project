@@ -17,7 +17,7 @@ const paths = {
     scss: 'src/scss/**/*.scss',
     js: 'src/js/**/*.js',
     imagenes: 'src/img/**/*',
-    php: '*.php',
+   
 }
 
 function css() {
@@ -54,16 +54,10 @@ function versionWebp() {
         .pipe(notify({ message: 'Imagen Completada' }));
 }
 
-function php() {
-    return src(paths.php)
-        .pipe(dest('build')); // Copia los archivos PHP a la carpeta de salida
-}
-
 
 function watchArchivos() {
     watch(paths.scss, css);
     watch(paths.js, javascript);
-    watch(paths.php, php);
     watch(paths.imagenes, imagenes);
     watch(paths.imagenes, versionWebp);
 }
@@ -72,4 +66,4 @@ exports.css = css;
 exports.watchArchivos = watchArchivos;
 exports.default = parallel(css, javascript, imagenes, versionWebp, watchArchivos); 
 exports.javascript = javascript;
-exports.build = series(css, javascript, imagenes, versionWebp,php);
+exports.build = series(css, javascript, imagenes, versionWebp);
