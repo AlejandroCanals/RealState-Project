@@ -2,6 +2,7 @@
 
 require 'includes/funciones.php';
 
+
 incluirTemplate('header', $inicio = true);
 
 ?>
@@ -81,7 +82,7 @@ incluirTemplate('header', $inicio = true);
             <p>4</p>
           </li>
         </ul>
-        <a href="Anuncios.html" class="boton boton-amarillo-block">
+        <a href="anuncios.php" class="boton boton-amarillo-block">
           Ver propiedad
         </a>
       </div>
@@ -114,7 +115,7 @@ incluirTemplate('header', $inicio = true);
             <p>4</p>
           </li>
         </ul>
-        <a href="Anuncios.html" class="boton boton-amarillo-block">
+        <a href="anuncios.php" class="boton boton-amarillo-block">
           Ver propiedad
         </a>
       </div>
@@ -148,7 +149,7 @@ incluirTemplate('header', $inicio = true);
             <p>4</p>
           </li>
         </ul>
-        <a href="Anuncios.html" class="boton boton-amarillo-block">
+        <a href="anuncios.php" class="boton boton-amarillo-block">
           Ver propiedad
         </a>
       </div>
@@ -186,7 +187,7 @@ incluirTemplate('header', $inicio = true);
             <p>4</p>
           </li>
         </ul>
-        <a href="Anuncios.html" class="boton boton-amarillo-block">
+        <a href="anuncios.php" class="boton boton-amarillo-block">
           Ver propiedad
         </a>
       </div>
@@ -220,7 +221,7 @@ incluirTemplate('header', $inicio = true);
             <p>4</p>
           </li>
         </ul>
-        <a href="Anuncios.html" class="boton boton-amarillo-block">
+        <a href="anuncios.php" class="boton boton-amarillo-block">
           Ver propiedad
         </a>
       </div>
@@ -253,7 +254,7 @@ incluirTemplate('header', $inicio = true);
             <p>4</p>
           </li>
         </ul>
-        <a href="Anuncios.html" class="boton boton-amarillo-block">
+        <a href="anuncios.php" class="boton boton-amarillo-block">
           Ver propiedad
         </a>
       </div>
@@ -265,7 +266,7 @@ incluirTemplate('header', $inicio = true);
 
   <!--BOTON ANUNCIO-->
   <div class="alinear-derecha">
-    <a href="Anuncios.html" class="boton-verde">Ver Todas</a>
+    <a href="anuncios.php" class="boton-verde">Ver Todas</a>
   </div>
 </section>
 
@@ -276,7 +277,7 @@ incluirTemplate('header', $inicio = true);
     Llena el formulario de contacto y un asesor se pondrá en contacto con
     usted en la mayor brevedad posible
   </p>
-  <a href="Contacto.html" class="boton-amarillo">Contáctanos</a>
+  <a href="contacto.php" class="boton-amarillo">Contáctanos</a>
 </section>
 
 <!--SECCION BLOG-->
@@ -293,7 +294,7 @@ incluirTemplate('header', $inicio = true);
         </picture>
       </div>
       <div class="texto-entrada">
-        <a href="entrada.html">
+        <a href="entrada.php">
           <h4>Terraza en el techo de tu casa</h4>
           <p class="informacion-meta"><span>04/07/2023</span></p>
           <p>
@@ -315,7 +316,7 @@ incluirTemplate('header', $inicio = true);
         </picture>
       </div>
       <div class="texto-entrada">
-        <a href="entrada.html">
+        <a href="entrada.php">
           <h4>Guía para la decoración de tu hogar</h4>
           <p class="informacion-meta"><span>04/07/2023</span></p>
           <p>
